@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUAWEI CLOUD Live - URL Signing Tool</title>
+  <link rel="stylesheet" href="css/milligram.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="wrapper">
+    <section class="header">
+      <h1>HUAWEI CLOUD Live</h1>
+      <h2>URL Signing Tool</h2>
+    </section>
+    <section class="container">
+      <form id="inputForm">
+        <fieldset>
+          <label for="streamDomain">Stream Domain Name</label>
+          <input type="text" placeholder="pull.example.com" id="streamDomain" required>
+
+          <label for="streamValidationKey">Stream URL Validation Key (optional)</label>
+          <input type="password" id="streamValidationKey">
+
+          <label for="ingestDomain">Ingest Domain Name</label>
+          <input type="text" placeholder="push.example.com" id="ingestDomain" required>
+
+          <label for="ingestValidationKey">Ingest URL Validation Key (optional)</label>
+          <input type="password" id="ingestValidationKey">
+
+          <label for="transcodingTemplates">Transcoding Template IDs (optional, separated by comma)</label>
+          <input type="text" placeholder="lld,lhd" id="transcodingTemplates">
+
+          <label for="appName">AppName</label>
+          <input type="text" placeholder="live" id="appName" required>
+
+          <label for="streamName">StreamName</label>
+          <input type="text" placeholder="Enter a stream name" id="streamName" required>
+
+          <button class="button-primary" type="submit">Generate URLs</button>
+          <input class="button-outline" type="button" value="Example data" onclick="fillForm()">
+          <input class="button-outline" type="button" value="Clear form" onclick="fillForm(true)">
+        </fieldset>
+      </form>
+      <pre><code id="outputLinks">
+        Click "Generate URLs" and they will be displayed here
+      </code></pre>
+    </section>
+  </main>
+  <script src="js/crypto-js.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

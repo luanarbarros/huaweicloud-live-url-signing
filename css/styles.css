@@ -1,0 +1,22 @@
+.wrapper {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.wrapper > .container {
+    padding-bottom: 7.5rem;
+    padding-top: 4rem;
+}
+.wrapper .container {
+    max-width: 80rem;
+}
+.header {
+    padding-top: 4rem;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
